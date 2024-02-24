@@ -81,12 +81,13 @@ while True:
 	# draw a background
 	display_surface.fill('black')
 
-	# update
-	all_sprites.update(dt)
+	
+	if player.pos.y > 1180:
+		# update
+		all_sprites.update(dt)
 
-	# draw
-	# all_sprites.draw(display_surface)
-	all_sprites.customized_draw()
+		# draw
+		all_sprites.customized_draw()
 
 	# update the display surface -> drawing the frame
 	pygame.display.update()
